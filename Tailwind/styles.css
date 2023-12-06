@@ -1,0 +1,10 @@
+:root{
+    --colormain: #E31837;
+    --backgroundYellow: #EFBB40;
+    --fontMain: 'Nunito Sans', sans-serif;
+    --fontSecond: 'Montserrat', sans-serif;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+}
