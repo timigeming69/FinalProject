@@ -34,6 +34,16 @@
     padding-top: 40px;
 }
 
-.linav{
-    color: ;
+.linav a{
+    color:black ;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.btn{
+    border-radius: 999px;
+    background: #E31837;
+    border-color: transparent;
+    margin-top: 16px;
+    padding: 2px 45px;
 }

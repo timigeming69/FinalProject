@@ -1,2 +1,2 @@
 # FinalProject
-Clone Website Jolibee using TailwindCSS &amp; Bootstrap
+Clone Website Jollibee using TailwindCSS &amp; Bootstrap

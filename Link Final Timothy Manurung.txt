@@ -1,0 +1,10 @@
+Github Repo : 
+https://github.com/timigeming69/FinalProject
+
+Netlify :
+https://timigeming69.netlify.app/tailwind/
+https://timigeming69.netlify.app/bootstrap/
+
+Custom Domain :
+https://timi.my.id/tailwind/
+https://timi.my.id/bootstrap/
