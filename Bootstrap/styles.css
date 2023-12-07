@@ -1,0 +1,39 @@
+*{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bgmerah{
+    background: #E31837;
+    height: 40px;
+}
+
+
+.navbaratas{
+    margin-top: 7px;
+}
+
+.container{
+    padding: 0 90px;
+}
+
+.logojolibee{   
+    width: 80px;
+    height: 80px;
+    margin: 15px 0;
+}
+
+.logojolibee a img {
+    width: 100%;
+    height: 100%;
+}
+
+.isinavbawah{
+    padding-top: 40px;
+}
+
+.linav{
+    color: ;
+}
