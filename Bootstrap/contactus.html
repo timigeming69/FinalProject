@@ -115,41 +115,77 @@
         </nav>
 
         <div class="container mt-5">
-          <div class="row">
-            <div class="col-md-6 offset-md-3">
-              <div class="card">
-                <div class="card-header text-center">
-                  <h2>Timothy Geraldo M</h2>
-                </div>
-                <div class="card-body">
-                  <img src="images/WhatsApp Image 2023-11-14 at 09.16.52.jpeg" alt="Your Profile Picture" class="img-fluid mb-3">
-                  
-                  <h5 class="card-title">About Me</h5>
-                  <p class="card-text">
-                    Life is like a canvas, and I am the artist painting my story.
-                    I enjoy expressing my creativity through various mediums and
-                    constantly seeking new opportunities for growth.
-                  </p>
-      
-                  <h5 class="card-title">Contact Information</h5>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Email: 2281045@unai.edu</li>
-                    <li class="list-group-item">Phone: +1 123 456 7890</li>
-                    <li class="list-group-item">Location: Jakarta, Indonesia</li>
-                  </ul>
-      
-                  <h5 class="card-title mt-3">Skills</h5>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Web Design</li>
-                    <li class="list-group-item">Graphic Design</li>
-                    <li class="list-group-item">Photography</li>
-  
-                  </ul>
-                </div>
+          <h2>Contact Us</h2>
+          <form>
+            <div class="form-group">
+              <label for="fullName">Full Name:</label>
+              <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+            </div>
+        
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your e-mail">
+            </div>
+        
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter your username">
+            </div>
+        
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter your password">
+            </div>
+        
+            <div class="form-group">
+              <label>Gender:</label>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="male" name="gender">
+                <label class="form-check-label" for="male">Male</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="female" name="gender">
+                <label class="form-check-label" for="female">Female</label>
               </div>
             </div>
-          </div>
+        
+            <div class="form-group">
+              <label for="religion">Religion:</label>
+              <select class="form-control" id="religion">
+                <option>Christianity</option>
+                <option>Islam</option>
+                <option>Hinduism</option>
+                <option>Buddhism</option>
+                <option>Judaism</option>
+                <option>Other</option>
+              </select>
+            </div>
+        
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <textarea class="form-control" id="address" rows="3" placeholder="Enter your address"></textarea>
+            </div>
+        
+            <div class="form-group">
+              <label>Hobbies:</label>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="hobby1">
+                <label class="form-check-label" for="hobby1">Reading</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="hobby2">
+                <label class="form-check-label" for="hobby2">Traveling</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="hobby3">
+                <label class="form-check-label" for="hobby3">Sports</label>
+              </div>
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
         </div>
+        
 
 
 <div class="max-w-[1236px] mx-auto">
