@@ -115,76 +115,86 @@
         </nav>
 
         <div class="container mt-5">
-          <h2>Contact Us</h2>
-          <form>
-            <div class="form-group">
-              <label for="fullName">Full Name:</label>
-              <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
-            </div>
-        
-            <div class="form-group">
-              <label for="email">E-mail:</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter your e-mail">
-            </div>
-        
-            <div class="form-group">
-              <label for="username">Username:</label>
-              <input type="text" class="form-control" id="username" placeholder="Enter your username">
-            </div>
-        
-            <div class="form-group">
-              <label for="password">Password:</label>
-              <input type="password" class="form-control" id="password" placeholder="Enter your password">
-            </div>
-        
-            <div class="form-group">
-              <label>Gender:</label>
-              <div class="form-check">
-                <input type="radio" class="form-check-input" id="male" name="gender">
-                <label class="form-check-label" for="male">Male</label>
+          <h1 class="text-center mb-4">Contact Us</h1>
+          <form id="contactForm">
+              <div class="mb-3">
+                  <label for="fullName" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="fullName" name="fullName">
               </div>
-              <div class="form-check">
-                <input type="radio" class="form-check-input" id="female" name="gender">
-                <label class="form-check-label" for="female">Female</label>
+              <div class="mb-3">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="email" name="email">
               </div>
-            </div>
-        
-            <div class="form-group">
-              <label for="religion">Religion:</label>
-              <select class="form-control" id="religion">
-                <option>Christianity</option>
-                <option>Islam</option>
-                <option>Hinduism</option>
-                <option>Buddhism</option>
-                <option>Judaism</option>
-                <option>Other</option>
-              </select>
-            </div>
-        
-            <div class="form-group">
-              <label for="address">Address:</label>
-              <textarea class="form-control" id="address" rows="3" placeholder="Enter your address"></textarea>
-            </div>
-        
-            <div class="form-group">
-              <label>Hobbies:</label>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="hobby1">
-                <label class="form-check-label" for="hobby1">Reading</label>
+              <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="username" name="username">
               </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="hobby2">
-                <label class="form-check-label" for="hobby2">Traveling</label>
+              <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" name="password">
               </div>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="hobby3">
-                <label class="form-check-label" for="hobby3">Sports</label>
+              <div class="mb-3">
+                  <label class="form-check-label">Gender</label>
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                      <label class="form-check-label" for="male">Male</label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                      <label class="form-check-label" for="female">Female</label>
+                  </div>
               </div>
-            </div>
-        
-            <button type="submit" class="btn btn-primary">Save</button>
+              <div class="mb-3">
+                  <label for="religion" class="form-label">Religion</label>
+                  <select class="form-select" id="religion" name="religion">
+                      <option value="" selected disabled>Select Religion</option>
+                      <option value="christianity">Christianity</option>
+                      <option value="islam">Islam</option>
+                      <option value="hinduism">Hinduism</option>
+                      <option value="buddhism">Buddhism</option>
+                      <option value="others">Others</option>
+                  </select>
+              </div>
+              <div class="mb-3">
+                  <label for="address" class="form-label">Address</label>
+                  <textarea class="form-control" id="address" name="address" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                  <label class="form-check-label">Hobbies</label>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="hobby1" name="hobbies[]" value="reading">
+                      <label class="form-check-label" for="hobby1">Reading</label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="hobby2" name="hobbies[]" value="gaming">
+                      <label class="form-check-label" for="hobby2">Gaming</label>
+                  </div>
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="hobby3" name="hobbies[]" value="traveling">
+                      <label class="form-check-label" for="hobby3">Traveling</label>
+                  </div>
+              </div>
+              <button type="button" class="btn btn-primary" onclick="validateForm()">Save</button>
           </form>
-        </div>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+          function validateForm() {
+              var fullName = document.getElementById('fullName').value;
+              var email = document.getElementById('email').value;
+              var username = document.getElementById('username').value;
+              var password = document.getElementById('password').value;
+              var gender = document.querySelector('input[name="gender"]:checked');
+              var religion = document.getElementById('religion').value;
+              var address = document.getElementById('address').value;
+              var hobbies = document.querySelectorAll('input[name="hobbies[]"]:checked');
+      
+              if (!fullName || !email || !username || !password || !gender || !religion || !address || hobbies.length === 0) {
+                  alert('Please fill in all fields.');
+              }
+          }
+      </script>
         
 
 
